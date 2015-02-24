@@ -1,0 +1,2 @@
+include environment
+include django_app
