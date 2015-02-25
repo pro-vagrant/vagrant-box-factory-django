@@ -1,2 +1,7 @@
 include environment
-include django_app
+
+class { 'django_app':
+    default_vhost  => false,
+    service_enable => false,
+    service_ensure => false
+}
