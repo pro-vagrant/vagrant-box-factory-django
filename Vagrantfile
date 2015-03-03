@@ -4,6 +4,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "ubuntu1404-i386-puppetlatest-1.0.12"
 
+  config.ssh.insert_key = false
+
   # Only during build
   config.vm.provision "file", source: "box-version.txt", destination: "box-version.txt"
   config.vm.provision "file", source: "box-name.txt", destination: "box-name.txt"
