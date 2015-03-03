@@ -1,4 +1,8 @@
+include stdlib
 include environment
+
+class { ubuntu: stage => setup }
+
 
 class { 'django_app':
     default_vhost  => false,
